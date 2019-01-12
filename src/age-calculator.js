@@ -3,6 +3,8 @@ const venusYear = 0.62;
 const marsYear = 1.88;
 const jupiterYear = 11.86;
 
+/*eslint-disable no-unused-vars*/
+
 export class GalacticAgeCalculator {
   constructor(age, lifeExpectancy) {
     this.age = age;
@@ -10,34 +12,34 @@ export class GalacticAgeCalculator {
   }
 
   mercuryAge() {
-    return (this.age / mercuryYear);
+    return Math.floor(this.age / mercuryYear);
   }
 
   venusAge() {
-    return (this.age / venusYear);
+    return Math.floor(this.age / venusYear);
   }
 
   marsAge() {
-    return (this.age / marsYear);
+    return Math.floor(this.age / marsYear);
   }
 
   jupiterAge() {
-    return (this.age / jupiterYear);
+    return Math.floor(this.age / jupiterYear);
   }
 
   mercuryLeftYears() {
-    return (this.lifeExpectancy / mercuryYear - this.mercuryAge);
+    return Math.max(0, Math.floor(this.lifeExpectancy / mercuryYear - this.mercuryAge()));
   }
 
   venusLeftYears() {
-    return (this.lifeExpectancy / venusYear - this.venusAge);
+    return Math.max(0, Math.floor(this.lifeExpectancy / venusYear - this.venusAge()));
   }
 
   marsLeftYears() {
-    return (this.lifeExpectancy / marsYear - this.marsAge);
+    return Math.max(0, Math.floor(this.lifeExpectancy / marsYear - this.marsAge()));
   }
-  
+
   jupiterLeftYears() {
-    return (this.lifeExpectancy / jupiterYear - this.jupiterAge);
+    return Math.max(0, Math.floor(this.lifeExpectancy / jupiterYear - this.jupiterAge()));
   }
 }
