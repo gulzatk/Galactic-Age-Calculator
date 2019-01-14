@@ -3,10 +3,12 @@ import { GalacticAgeCalculator } from './../src/age-calculator.js';
 describe("Galactic age calculator", function() {
   let inputOne;
   let inputTwo;
+  let inputTree;
 
   beforeEach(function() {
     inputOne = new GalacticAgeCalculator(27);
     inputTwo = new GalacticAgeCalculator(78);
+    inputTree = new GalacticAgeCalculator(90);
   });
 
   it("should calculate user's age in Mercury years.", function() {
@@ -31,4 +33,13 @@ describe("Galactic age calculator", function() {
     expect(inputOne.marsLeftYears()).toEqual(Math.floor(78/1.88-inputOne.marsAge()));
     expect(inputOne.jupiterLeftYears()).toEqual(Math.floor(78/11.86-inputOne.jupiterAge()));
   });
+
+  it("should return the number of years they have lived past the life expectancy on each planet", function() {
+    expect(inputTree.mercuryPassedYear()).toEqual(Math.floor(inputTree.mercuryAge()-78/0.24);
+    expect(inputTree.venusPassedYear()).toEqual(Math.floor(inputTree.venusAge()-78/0.62);
+    expect(inputTree.marsPassedYear()).toEqual(Math.floor(inputTree.marsAge()-78/1.88);
+    expect(inputTree.jupiterPassedYear()).toEqual(Math.floor(inputTree.jupiterAge()-78/11.86);
+
+
+  })
 });
