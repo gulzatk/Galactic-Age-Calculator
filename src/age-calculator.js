@@ -42,4 +42,20 @@ export class GalacticAgeCalculator {
   jupiterLeftYears() {
     return Math.max(0, Math.floor(this.lifeExpectancy / jupiterYear - this.jupiterAge()));
   }
+
+  mercuryPassedYears() {
+    return Math.floor(this.mercuryAge() - this.lifeExpectancy / mercuryYear);
+  }
+
+  venusPassedYears() {
+    return Math.floor(this.venusAge() - this.lifeExpectancy / venusYear);
+  }
+
+  marsPassedYears() {
+    return Math.floor(this.marsAge() - this.lifeExpectancy / marsYear);
+  }
+
+  jupiterPassedYears() {
+    return Math.floor(this.jupiterAge() - this.lifeExpectancy / jupiterYear);
+  }
 }

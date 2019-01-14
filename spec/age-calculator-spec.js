@@ -35,10 +35,10 @@ describe("Galactic age calculator", function() {
   });
 
   it("should return the number of years they have lived past the life expectancy on each planet", function() {
-    expect(inputTree.mercuryPassedYear()).toEqual(Math.floor(inputTree.mercuryAge()-78/0.24);
-    expect(inputTree.venusPassedYear()).toEqual(Math.floor(inputTree.venusAge()-78/0.62);
-    expect(inputTree.marsPassedYear()).toEqual(Math.floor(inputTree.marsAge()-78/1.88);
-    expect(inputTree.jupiterPassedYear()).toEqual(Math.floor(inputTree.jupiterAge()-78/11.86);
+    expect(inputTree.mercuryPassedYears()).toEqual(Math.floor(inputTree.mercuryAge()-78/0.24));
+    expect(inputTree.venusPassedYears()).toEqual(Math.floor(inputTree.venusAge()-78/0.62));
+    expect(inputTree.marsPassedYears()).toEqual(Math.floor(inputTree.marsAge()-78/1.88));
+    expect(inputTree.jupiterPassedYears()).toEqual(Math.floor(inputTree.jupiterAge()-78/11.86));
 
 
   })
